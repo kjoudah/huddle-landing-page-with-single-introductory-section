@@ -1,0 +1,111 @@
+@use 'reset.scss';
+@use 'globals.scss';
+
+body {
+  min-height: 100vh;
+  background: url(../images/bg-mobile.svg) no-repeat top/100% 50%,
+    var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+p,
+button {
+  font-family: var(--font-body);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  color: white;
+  padding: 3rem;
+  gap: 3rem;
+}
+
+ion-icon {
+  color: white;
+  font-size: 24px;
+  background-color: transparent;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  // gap: 5rem;
+}
+
+.logo-container {
+  width: 10rem;
+}
+
+.illustration-container {
+  // width: 22rem;
+}
+
+.bottom-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.register-button {
+  cursor: pointer;
+  padding: 1rem 7rem;
+  border-radius: 2rem;
+  color: var(--primary);
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+  }
+}
+
+.socials-list {
+  display: flex;
+  gap: 1rem;
+
+  li {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: border 0.3s ease;
+
+    .fa-brands {
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      border: 1px solid var(--accent);
+
+      .fa-brands {
+        color: var(--accent);
+      }
+    }
+  }
+}

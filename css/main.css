@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --primary: hsl(257, 40%, 49%);
+  --accent: hsl(300, 69%, 71%);
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url(../images/bg-mobile.svg) no-repeat top/100% 50%, var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+p,
+button {
+  font-family: var(--font-body);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  color: white;
+  padding: 3rem;
+  gap: 3rem;
+}
+
+ion-icon {
+  color: white;
+  font-size: 24px;
+  background-color: transparent;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-container {
+  width: 10rem;
+}
+
+.bottom-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.bottom-section h1 {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+.bottom-section p {
+  font-size: 1.2rem;
+}
+
+.register-button {
+  cursor: pointer;
+  padding: 1rem 7rem;
+  border-radius: 2rem;
+  color: var(--primary);
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease;
+}
+.register-button:hover, .register-button:focus {
+  background-color: var(--accent);
+}
+
+.socials-list {
+  display: flex;
+  gap: 1rem;
+}
+.socials-list li {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: border 0.3s ease;
+}
+.socials-list li .fa-brands {
+  color: white;
+  transition: color 0.3s ease;
+}
+.socials-list li:hover {
+  border: 1px solid var(--accent);
+}
+.socials-list li:hover .fa-brands {
+  color: var(--accent);
+}
